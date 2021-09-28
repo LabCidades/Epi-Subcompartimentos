@@ -1,0 +1,70 @@
+%--- Preamble ---------------------------------------------------------%
+% Load LaTeX packages
+\documentclass[aspectratio=169]{beamer}                    % supports floating text in any location
+\usetheme[darkmode]{pureminimalistic}
+%\usetheme[lightmode]{pureminimalistic}
+\graphicspath{
+	{logos/}
+	{images/}
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes,xpatch}% recommended
+%\usepackage[english]{babel}
+%\usepackage[american]{babel}
+\usepackage[brazil]{babel}
+\babelprovide[import, main]{portuguese}
+\babelprovide[import]{english}
+\usepackage{tikz}
+
+% \renewcommand{\pageword}{}
+% \renewcommand{\logoheader}{\vspace{1.5em}}
+\usepackage{bookmark}
+\usepackage[
+%    natbib=true,
+    backend=biber,
+%    style=abnt,
+%    style=authoryear-comp,
+%    style=authoryear-icomp,
+%    style=authoryear,
+%    style=ieee,
+%    style=acm,
+    style=apa,
+%    style=siam,
+%    style=ieeetr,
+%    style=plain,
+    doi=true,
+    eprint=false,
+    hyperref=true]
+    {biblatex}
+\addbibresource{references.bib}
+
+%% this makes it possible to add backup slides, without counting them
+\usepackage{appendixnumberbeamer}
+\renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{height=7cm,  % only if needed
+             width=12cm,  % only if needed
+             compat=1.17, % only if needed
+             legend style = {fill = black, draw = white}}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{float}
+
+% footer page
+\renewcommand{\pageword}{Página}
+
+% Math Font Default (Fira is strange)
+\renewcommand\mathfamilydefault{\rmdefault}
+
+% if loaded after begin{document} a warning will appear: "pdfauthor already used"
+\title[Inovação]{Inovação Aplicada ao Planejamento Urbano}
+\author{Jose Storopoli \\
+\texttt{josees@uni9.pro.br}}
+\institute{Universidade Nove de Julho - UNINOVE}
+\date{Outubro 2021}
+
+\begin{document}

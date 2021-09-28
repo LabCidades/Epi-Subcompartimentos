@@ -1,0 +1,44 @@
+% has to be loaded outside of a frame to work!
+\maketitle
+
+% For longer table of contents, I find it cleaner to
+% use no footline.
+\begin{frame}[plain, noframenumbering]{Sumário}
+    \tableofcontents
+\end{frame}
+
+\begin{frame}[plain, noframenumbering]{Licença}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            O texto e as figuras desses slides possuem uma
+            \href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt}{Licença
+            Creative Commons
+            Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)}
+            \vfill
+            \centering
+            \vspace{1em}
+            \includegraphics[width=0.2\columnwidth]{CC_NC_SA.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\columnwidth]{qrcode_slides.png}
+        \end{column}
+    \end{columns}
+    \vfill
+\end{frame}
+
+\section{Apresentação}
+\include{apresentacao}
+
+\section{Prelúdio}
+\include{prelude}
+
+\section{Inovação Disruptiva e Ambidesteridade}
+\include{inovacao_disruptiva}
+
+\section{Capacidade Absortiva e Aprendizagem Organizacional}
+\include{capacidade_absortiva}
+
+\begin{frame}[allowframebreaks]{Referências}
+	\printbibliography
+\end{frame}
