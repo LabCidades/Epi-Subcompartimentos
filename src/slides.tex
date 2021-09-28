@@ -21,6 +21,70 @@
     \vfill
 \end{frame}
 
+\begin{frame}{Truque da Corrente Linear\footnote{\textit{Linear Chain Trick}.} (TCL)}
+	O Truque da Corrente Linear (TCL) \parencite{hurtadoGeneralizationsLinearChain2019, hurtadoProcedureDerivingNew2020, andoHowFastLinear2020}
+	é usado em modelos epidemiológicos compartimentais para
+	modelar tempos de espera em transições de compartimentos usando
+	subcompartimentos com uma distribuição \textcolor{blue}{Erlang}\footnote{mais informações
+	sobre a distribuição Erlang na \href{https://en.wikipedia.org/wiki/Erlang_distribution}{Wikipedia}.}.
+	\vfill
+	A distribuição Erlang é uma soma de $k$ distribuições exponenciais
+	independentes.
+	\vfill
+	Sem subcompartimentos, a distribuição do tempo de espera se torna uma
+	distribuição \textcolor{blue}{Exponencial}.
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial vs Erlang}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+	    \begin{figure}
+	    \centering
+	    \begin{tikzpicture}[scale=0.5]
+       	    	\begin{axis}[every axis plot, line width=2pt,
+            	ylabel=FDP,
+            	xlabel={$X$},
+            	domain=0:5,samples=200,
+            	axis x line*=bottom, % no box around the plot, only x and y axis
+            	axis y line*=left, % the * suppresses the arrow tips
+            	enlarge x limits=true, % extend the axes a bit
+            	]
+
+		\addplot [blue] {exponential(1)};
+            	\addlegendentry{$\lambda=1$}
+	    	\end{axis}
+            \end{tikzpicture}
+	    \caption{Distribuição Exponencial}
+   	    \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+	    \begin{figure}
+            \centering
+	    \begin{tikzpicture}[scale=0.5]
+       	    	\begin{axis}[every axis plot, line width=2pt,
+            	ylabel=FDP,
+            	xlabel={$X$},
+            	domain=0:5,samples=200,
+            	axis x line*=bottom, % no box around the plot, only x and y axis
+            	axis y line*=left, % the * suppresses the arrow tips
+            	enlarge x limits=true, % extend the axes a bit
+            	]
+
+		\addplot [red] {erlang(1,1)};
+            	\addlegendentry{$\lambda=1, k=1$}
+		\addplot [yellow] {erlang(1,2)};
+            	\addlegendentry{$\lambda=1, k=2$}
+		\addplot [green] {erlang(1,3)};
+            	\addlegendentry{$\lambda=1, k=3$}
+	    	\end{axis}
+            \end{tikzpicture}
+	    \caption{Distribuição Erlang}
+   	    \end{figure}
+        \end{column}
+    \end{columns}
+    \vfill
+\end{frame}
+
 \begin{frame}[allowframebreaks]{Referências}
 	\printbibliography
 \end{frame}

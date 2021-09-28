@@ -61,9 +61,18 @@
 \renewcommand\mathfamilydefault{\rmdefault}
 
 % if loaded after begin{document} a warning will appear: "pdfauthor already used"
-\title[Truque Corrente Linear]{Título Longo}
-\author{Jose Storopoli \& Alessandra Pellini}
+\title[Truque Corrente Linear]{Modelo Epidemiológico Compartimental Usando o Truque de Corrente Linear para COVID-19}
+\author{Storopoli, Santos, Nóia, Noda \& Pellini}
 \institute{Universidade Nove de Julho - UNINOVE}
 \date{Outubro 2021}
 
 \begin{document}
+
+%--- Distributions ----------------------------------------------------%
+
+\tikzset{
+    declare function={
+      exponential(\l)=\l*exp(-\l*x);%
+      erlang(\l,\k)=((\l^\k)*x^(\k-1)*exp(-\l*x))/(\k-1)!;%
+    }
+}
