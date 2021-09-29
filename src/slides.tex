@@ -25,14 +25,14 @@
 	O Truque da Corrente Linear (TCL) \parencite{hurtadoGeneralizationsLinearChain2019, hurtadoProcedureDerivingNew2020, andoHowFastLinear2020}
 	é usado em modelos epidemiológicos compartimentais para
 	modelar tempos de espera em transições de compartimentos usando
-	subcompartimentos com uma distribuição \textcolor{blue}{Erlang}\footnote{mais informações
+	subcompartimentos com uma distribuição \textcolor{red}{Erlang}\footnote{mais informações
 	sobre a distribuição Erlang na \href{https://en.wikipedia.org/wiki/Erlang_distribution}{Wikipedia}.}.
 	\vfill
 	A distribuição Erlang é uma soma de $k$ distribuições exponenciais
 	independentes.
 	\vfill
 	Sem subcompartimentos, a distribuição do tempo de espera se torna uma
-	distribuição \textcolor{blue}{Exponencial}.
+	distribuição \textcolor{red}{Exponencial}.
 \end{frame}
 
 \begin{frame}{Distribuição Exponencial vs Erlang}
@@ -50,7 +50,7 @@
             	enlarge x limits=true, % extend the axes a bit
             	]
 
-		\addplot [blue] {exponential(1)};
+		\addplot [red] {exponential(1)};
             	\addlegendentry{$\lambda=1$}
 	    	\end{axis}
             \end{tikzpicture}
