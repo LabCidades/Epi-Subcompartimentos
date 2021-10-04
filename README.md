@@ -1,4 +1,4 @@
-# UNINOVE_Brazil
+# Modelo COVID-19 Brasil
 
 COVID-19 Modeling work at [UNINOVE](https://www.uninove.br) for Brazil.
 
